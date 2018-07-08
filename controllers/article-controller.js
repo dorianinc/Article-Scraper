@@ -11,7 +11,7 @@ let router = express.Router();
 router.get("/scrape", function (req, res) {
   axios.get("https://overwatchleague.com/en-us/news").then(function (response) {
 
-    var $ = cheerio.load(response.data);
+    let $ = cheerio.load(response.data);
 
     $("div.SearchResult").each(function (i, element) {
 
@@ -28,7 +28,7 @@ router.get("/scrape", function (req, res) {
         .find("div.SearchResult-item")
         .children("a")
         .attr("style").split("\'")[1];
-      result.url = 'https://overwatchleague.com/en-us/news' +
+      result.url = 'https://overwatchleague.com' +
         $(this)
           .find("h6")
           .children("a")
@@ -54,7 +54,7 @@ router.get("/scrape", function (req, res) {
 router.get("/feed", function (req, res) {
   db.Article.find({})
     .then(function (data) {
-      res.render('feed', { Article: data })
+        res.render('feed', { Article: data })
     })
     .catch(function (err) {
       res.json(err);

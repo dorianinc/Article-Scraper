@@ -18,8 +18,8 @@
   }
 
   .btn-warning {
-    margin-left: 10px;
     margin-right: 5px;
+    margin-bottom: 5px;
     font-family: 'Lato', sans-serif;
   }
 
@@ -41,12 +41,6 @@
 
   .display-5 {
     font-family: 'Roboto', sans-serif;
-      {
-        {
-         !-- margin-bottom: 20px;
-        --
-      }
-    }
   }
 
   .article {
@@ -89,33 +83,33 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-dark transparent">
     <a class="navbar-brand">
-        <img src="https://vignette.wikia.nocookie.net/overwatch/images/5/54/Spray_-_Logo.png/revision/latest?cb=20160715182447" alt="Overwatch Logo"
-            width="80" height="73" class="d-inline-block align-top">
+      <img src="https://vignette.wikia.nocookie.net/overwatch/images/5/54/Spray_-_Logo.png/revision/latest?cb=20160715182447" alt="Overwatch Logo"
+        width="80" height="73" class="d-inline-block align-top">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/">Home
-            </a>
-            <a class="nav-item nav-link" href="/saved">Saved</a>
-            <form action="/scrape" method="GET">
-                <button type="submit" class="btn btn-warning btn-lg text-body">Scrape</button>
-            </form>
-            <form action="/article/clearDB" method="POST">
-                <button type="submit" class="btn btn-danger btn-lg text-body">Delete All</button>
-            </form>
-        </div>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/">Home
+        </a>
+        <a class="nav-item nav-link" href="/saved">Saved</a>
+        <form action="/scrape" method="GET">
+          <button type="submit" class="btn btn-warning btn-lg text-body">Scrape</button>
+        </form>
+        <form action="/article/clearDB" method="POST">
+          <button type="submit" class="btn btn-danger btn-lg text-body">Delete All</button>
+        </form>
+      </div>
     </div>
-</nav>
-<div class="jumbotron jumbotron-fluid">
+  </nav>
+  <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4 text-center">Overwatch League News</h1>
-        <p class="lead center text-center">MongoDB data-scraper</p>
+      <h1 class="display-4 text-center">Overwatch League News</h1>
+      <p class="lead center text-center">MongoDB data-scraper</p>
     </div>
-</div>
+  </div>
   {{{body}}}
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -125,5 +119,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
   crossorigin="anonymous"></script>
-
 </html>

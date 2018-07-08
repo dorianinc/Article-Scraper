@@ -1,4 +1,4 @@
-
+{{#if Article}}
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3"></div>
@@ -21,6 +21,9 @@
                     </div>
                     <div class="row">
                         <p class="article-summary">{{this.summary}}</p>
+                    </div>
+                    <div class="row">
+                        <a href="{{this.url}}">Link</a>
                     </div>
                     <div class="row align-bottom">
                         <div class="article-bylines">
@@ -72,3 +75,17 @@
     </div>
     {{/if}} {{/each}}
 </div>
+{{/if}}
+{{#unless Article}}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h1 class="display-5 text-center">
+               No saved articles
+            </h1>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+{{/unless}}

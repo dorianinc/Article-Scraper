@@ -19,7 +19,7 @@ router.get("/feed", function (req, res) {
   res.render('feed');
 });
 
-router.get("/saved", function (req, res){
+router.get("/saved", function (req, res) {
   res.render('saved')
 })
 

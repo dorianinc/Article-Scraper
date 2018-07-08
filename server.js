@@ -39,7 +39,7 @@ app.use(viewController);
 //=================================================//
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/OverwatchNewsTest2");
+mongoose.connect("mongodb://localhost/OverwatchNewsFinalalmost");
 
 // Start Server
 app.listen(PORT, function() {
