@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overwatch League News</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<style>
+  .navbar {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .btn-warning {
+    margin-left: 10px;
+    margin-right: 5px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .jumbotron {
+    background-image: url("https://blznews.akamaized.net/images/backgrounds/blizzardApp/blizzardApp_background_overwatch-139e513487ef1fb94cc71c520829d1b40e5ffad7dbee4f5331cc1402f6401c5b4f87a320836793012a378bee12e2fface0e61903b8885f2d452617981a513b94.jpg");
+    height: 500px;
+  }
+
+  .display-4 {
+    margin-top: 2em;
+    font-family: 'Coda Caption', sans-serif;
+    color: #fff;
+  }
+
+  .lead {
+    font-family: 'Coda Caption', sans-serif;
+    color: #fff;
+  }
+
+  .display-5 {
+    font-family: 'Roboto', sans-serif;
+      {
+        {
+         !-- margin-bottom: 20px;
+        --
+      }
+    }
+  }
+
+  .article {
+    margin-bottom: 30px;
+    border-bottom: solid 3px black;
+    width: 100%;
+  }
+
+  .article-image {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+  .article-bylines {
+    width: 100%;
+    margin-top: 105px;
+    margin-bottom: 10px;
+  }
+
+  .article-note {
+    margin-right: 5px;
+  }
+
+  .notes {
+    border-bottom: solid 1px lightgray;
+  }
+
+  .note-text {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+
+  .note-delete {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark transparent">
+    <a class="navbar-brand">
+        <img src="https://vignette.wikia.nocookie.net/overwatch/images/5/54/Spray_-_Logo.png/revision/latest?cb=20160715182447" alt="Overwatch Logo"
+            width="80" height="73" class="d-inline-block align-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home
+            </a>
+            <a class="nav-item nav-link" href="/saved">Saved</a>
+            <form action="/scrape" method="GET">
+                <button type="submit" class="btn btn-warning btn-lg text-body">Scrape</button>
+            </form>
+            <form action="/article/clearDB" method="POST">
+                <button type="submit" class="btn btn-danger btn-lg text-body">Delete All</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4 text-center">Overwatch League News</h1>
+        <p class="lead center text-center">MongoDB data-scraper</p>
+    </div>
+</div>
+  {{{body}}}
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,74 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <h1 class="display-5">
+                Articles
+            </h1>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    {{#each Article}} {{#if saved}}
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="article">
+                <div class="article-container">
+                    <img class="article-image float-left" src="{{this.image}}" width="250" height="250">
+                    <div class="row">
+                        <h2 class="article-headline">{{this.headline}}</h2>
+                    </div>
+                    <div class="row">
+                        <p class="article-summary">{{this.summary}}</p>
+                    </div>
+                    <div class="row align-bottom">
+                        <div class="article-bylines">
+                            <p class="article-timestamp">{{this.timeStamp}}</p>
+                            <form action="/article/remove/{{id}}" method="POST">
+                                <button type="submit" class="btn btn-danger article-delete float-right">Delete</button>
+                            </form>
+                            <button type="submit" class="btn btn-primary article-note float-right" data-toggle="modal" data-target="#{{id}}">Make Note</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Notes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {{#each note}}
+                <div class="notes">
+                    <p class="note-text">
+                        {{this.body}}
+                    </p>
+                    <form action="/note/remove/{{id}}" method="POST">
+                        <button type="submit" class="btn btn-danger note-delete float-right">Delete</button>
+                    </form>
+                </div>
+                {{/each}}
+                <div class="modal-body">
+                    <form action="/note/create/{{id}}" method="POST">
+                        <div class="form-group article-textarea block-center">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="body" name="body"></textarea>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}} {{/each}}
+</div>
