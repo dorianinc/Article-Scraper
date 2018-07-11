@@ -27,6 +27,24 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 //=================================================//
 
+// Connect to the Mongo DB
+//=================================================//
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/OverwatchLeagueNews";
+
+// Connect Mongoose to db
+mongoose.connect(MONGODB_URI, function (error) {
+  // Log any errors connection with mongoose
+  if (error) {
+      console.log(error);
+  }
+  // or log a success message
+  else {
+      console.log("mongoose connection is successful");
+  }
+});
+//=================================================//
+
+
 // Routes
 //=================================================//
 const articleController = require("./controllers/article-controller");
@@ -37,9 +55,6 @@ app.use(articleController);
 app.use(noteController);
 app.use(viewController);
 //=================================================//
-
-// Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/OverwatchNewsFinalalmost");
 
 // Start Server
 app.listen(PORT, function() {
